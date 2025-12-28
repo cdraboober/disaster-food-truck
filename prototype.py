@@ -31,6 +31,16 @@ if 'requests' not in st.session_state:
         'Votes': [3, 7, 5],
         'User': ['匿名A', '匿名B', '匿名C']
     })
+# === 追加機能: 同調圧力の解除（ガヤ機能） ===
+st.divider()
+st.subheader("みんなの心の声（匿名）")
+# ダミーの「心の声」を表示
+st.chat_message("user").write("毎日おにぎりはキツイ...甘いものが食べたい")
+st.chat_message("user").write("隣の佐藤さんも『肉が食いたい』って言ってた")
+st.chat_message("user").write("不謹慎かもしれないけど、炭酸ジュース飲みたい...")
+
+st.caption("あなたも正直な気持ちを書いて大丈夫です。ここは匿名です。")
+# ==========================================
 
 # 1. 欲望入力フォーム（サイドバーまたは上部）
 with st.expander("欲望を投稿する（匿名）", expanded=True):
